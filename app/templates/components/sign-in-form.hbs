@@ -1,6 +1,9 @@
-{{email-input email=credentials.email}}
-{{password-input password=credentials.password}}
-<div class="form-group">
-  <button type="submit" class="btn btn-primary" {{action "submit"}}>Sign In</button>
-  <button class="btn btn-default" {{action "reset"}}>Cancel</button>
-</div>
+<form id="sign-in" class="col-md-offset-4 col-md-4 form-horizontal" {{action "submit" on='submit'}}>
+    <div class="">
+    {{email-input email=credentials.email}}
+    {{password-input password=credentials.password}}
+    <div class="container col-md-12">
+        <button type="submit" class="btn btn-lg btn-block btn-primary">Sign In</button>
+    </div>
+  </div>
+</form>
