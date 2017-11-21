@@ -1,12 +1,12 @@
-
   {{nav-bar signOut="signOut"}}
-
   {{#each flashMessages.queue as |flash|}}
     {{flash-message flash=flash}}
   {{/each}}
 
+  <div class="container-fluid">
     {{outlet}}
+  </div>
 
-<footer class="footer">
-    <p>&copy; 2017 TacosTacosTacos Inc.</p>
+<footer class="container-fluid footer">
+    <span>&copy; 2017 TacosTacosTacos Inc.</span>
 </footer>
