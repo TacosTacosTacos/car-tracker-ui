@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/car-tracker-ui';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://car-tracker-api.herokuapp.com/';
+    ENV.apiHost = 'https://car-tracker-api.herokuapp.com';
   }
 
   return ENV;
