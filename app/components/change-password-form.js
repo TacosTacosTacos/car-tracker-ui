@@ -14,8 +14,6 @@ export default Ember.Component.extend({
     },
   },
   willDestroyElement () {
-    console.log('before', this.get('passwords'))
     this.set('passwords', {});
-    console.log('after', this.get('passwords'))
   }
 });

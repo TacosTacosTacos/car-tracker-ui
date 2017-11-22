@@ -10,5 +10,6 @@ export default Ember.Component.extend({
     },
   },
   willDestroyElement () {
-  }
+    this.set('credentials', {});
+  },
 });
