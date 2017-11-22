@@ -7,7 +7,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-      {{#link-to "index"}}<a class="navbar-brand" href="#">CarTracker</a>{{/link-to}}
+        {{#if isAuthenticated}}
+          {{#link-to "user-dashboard"}}<a class="navbar-brand" href="#">CarTracker</a>{{/link-to}}
+        {{else}}
+          {{#link-to "index"}}<a class="navbar-brand" href="#">CarTracker</a>{{/link-to}}
+        {{/if}}
     </div>
     <div id="navbar" class="navbar-collapse collapse navbar-right">
       {{#if isAuthenticated}}
