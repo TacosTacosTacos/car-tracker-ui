@@ -20,6 +20,7 @@ export default Ember.Route.extend({
 
       });
     },
+  },
   beforeModel () {
     if (this.get('auth.credentials.token')) {
       this.transitionTo('user-dashboard');
