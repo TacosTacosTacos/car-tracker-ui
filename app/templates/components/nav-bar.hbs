@@ -14,22 +14,22 @@
         <ul class="nav navbar-nav">
           <li>
             {{#link-to "user-dashboard"}}
-              <div>My Dashboard</div>
+            {{fa-icon "tachometer" size=1}}&nbsp;<span>My Dashboard</span>
             {{/link-to}}
           </li>
           <li>
             {{#link-to "user-dashboard"}}
-              <div>Track Mileage</div>
+              {{fa-icon "road" size=1}}&nbsp;<span>Track Mileage</span>
             {{/link-to}}
           </li>
           <li>
             {{#link-to "user-dashboard"}}
-              <div>Track Maintenance</div>
+              {{fa-icon "wrench" size=1}}&nbsp;<span>Track Maintenance</span>
             {{/link-to}}
           </li>
           <li>
             {{#link-to "user-dashboard"}}
-              <div>Car Profile</div>
+              {{fa-icon "car" size=1}}&nbsp;<span>Car Profile</span>
             {{/link-to}}
           </li>
           <li class="dropdown">
@@ -38,7 +38,9 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                {{#link-to "change-password"}}<a href="#">Change Password</a>{{/link-to}}
+                {{#link-to "change-password"}}
+                <span>Change Password</span>
+                {{/link-to}}
               </li>
               <li role="separator" class="divider"></li>
               <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
@@ -49,17 +51,17 @@
         <ul class="nav navbar-nav navbar-right">
           <li>
             {{#link-to "index"}}
-              <a href="#">Home</a>
+            {{fa-icon "home" size=1}}&nbsp;<span>Home</span>
             {{/link-to}}
           </li>
           <li>
             {{#link-to "sign-in"}}
-              <a href="#">Sign In</a>
+              {{fa-icon "sign-in" size=1}}&nbsp;<span>Sign In</span>
             {{/link-to}}
           </li>
           <li>
             {{#link-to "sign-up"}}
-              <a href="#">Sign Up</a>
+              {{fa-icon "user-plus" size=1}}&nbsp;<span>Sign Up</span>
             {{/link-to}}
           </li>
         </ul>

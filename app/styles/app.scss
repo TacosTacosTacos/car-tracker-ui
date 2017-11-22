@@ -1,11 +1,14 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 @import url('https://netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css');
-// @import url('http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css');
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 $page-background:  #f0f0f5;
 $header-background: #d1d1e0;
+$text-shadow: #000;
+$whitebox-color: #fff;
+$whitebox-border-color: #000;
+$black-shadow: #888;
 
 html {
   min-height: 100%;
@@ -19,31 +22,27 @@ body {
 }
 
 .page-title {
+  font-style: italic;
+  font-weight: bold;
   text-align: center;
   text-decoration: underline;
-  font-weight: bold;
-  font-style: italic;
-}
-
-footer {
-
 }
 
 .whitebox {
-  background-color: white;
-  border-color: black;
+  background-color: $whitebox-color;
+  border-color: $whitebox-border-color;
   border-style: solid;
+  box-shadow: 5px 5px 5px $black-shadow;
   margin-bottom: .5em;
   margin-right: .5em;
-  box-shadow: 5px 5px 5px #888888;
   padding: 1em;
 }
 
 .whitebox-forms {
-  background-color: white;
-  border-color: black;
+  background-color: $whitebox-color;
+  border-color: $whitebox-border-color;
   border-style: solid;
-  box-shadow: 5px 5px 5px #888888;
+  box-shadow: 5px 5px 5px $black-shadow;
 }
 
 .confetti {
@@ -51,15 +50,34 @@ footer {
 }
 
 .jumbotron {
-  background-image: url('https://images.unsplash.com/photo-1445966275305-9806327ea2b5?auto=format&fit=crop&w=3000&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
-  padding-bottom: 1em;
-  padding-top: 1em;
-  border-color: black;
-  border-style: solid;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  background-color: #B8B8B8;
+}
+
+.jumbotron .jumbo-background {
+  background: url('https://images.unsplash.com/photo-1445966275305-9806327ea2b5?auto=format&fit=crop&w=3000&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+  background-position: 50% 45%;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 10% 40%;
-  color: red;
+  border-color: $whitebox-border-color;
+  border-style: solid;
+  bottom: 0;
+  // box-shadow: 5px 5px 5px $black-shadow;
+  height: 100%;
+  left: 0;
+  opacity: .8;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+
 }
 
 .footer {
@@ -67,28 +85,26 @@ footer {
   height: 60px; //* Set the fixed height of the footer here */
   line-height: 60px; //* Vertically center the text there */
   position: absolute;
-  width: 100%;
   text-align: right;
+  width: 100%;
   // background-color: #f5f5f5;
 }
 
 .headline {
-  font-size: 3em;
-  text-align: center;
   color: $page-background;
-  font-weight:900;
-  text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
-  background-color: rgba(0,0,0,0.3);
+  font-size: 2.5em;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0px 0px 3px $text-shadow, -1px -1px $text-shadow, 1px 1px $text-shadow;
 }
 
 .subheadline {
-  font-size: 2em;
-  font-style: italic;
-  text-align: center;
   color: $page-background;
-  font-weight:900;
-  text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
-  background-color: rgba(0,0,0,0.3);
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 0px 0px 3px $text-shadow, -1px -1px $text-shadow, 1px 1px $text-shadow;
 }
 
 .marketing {

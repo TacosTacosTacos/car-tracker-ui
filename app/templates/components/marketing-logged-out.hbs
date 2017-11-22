@@ -1,12 +1,13 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
-  <div class="img">
-  <div class="container jumbohead">
+  <div class="jumbo-background"></div>
+  <div class="container">
     <div class="headline">CarTracker</div>
     <div class="subheadline">Keeping Track Of Car Maintenance Has Never Been Easier!</div>
   </div>
 </div>
-</div>
+
+
 <div class="container-fluid">
   <div class="marketing">
     <!-- Three columns of text below the carousel -->
@@ -15,19 +16,24 @@
         <div class="whitebox">
         <br />
         <img class="img-circle" src="https://images.unsplash.com/photo-1498887960847-2a5e46312788?auto=format&fit=crop&w=2250&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Generic placeholder image" width="140" height="140">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. <br/>
+        <h2>Track Mileage</h2>
+        <p>Donec sed odio dui.
           Etiam porta sem malesuada magna mollis euismod.
           Nullam id dolor id nibh ultricies vehicula ut id elit
           Morbi leo risus, porta ac consectetur ac,
-          vestibulum at eros. Praesent commodo cursus magna.</p>
+          vestibulum at eros. Praesent commodo cursus magna.
+          <br>
+          <br>
+
+        </p>
+          {{#link-to "sign-up"}}<button type="button" class="btn btn-primary btn-lg">Sign Up Now!</button>{{/link-to}}
       </div>
     </div>      <!-- /.col-lg-4 -->
       <div class="col-sm-4">
         <div class="whitebox">
         <br />
         <img class="img-circle" src="https://images.unsplash.com/photo-1474265466889-5f5d93b0d5e8?auto=format&fit=crop&w=2250&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Generic placeholder image" width="140" height="140">
-        <h2>Heading</h2>
+        <h2>Track Maintenance</h2>
         <p>Duis mollis, est non commodo luctus,
           nisi erat porttitor
           ligula, eget lacinia
@@ -36,6 +42,7 @@
           fermentum. Fusce dapibus,
           tellus ac cursus commodo,
           tortor mauris condimentum nibh.</p>
+          {{#link-to "sign-up"}}<button type="button" class="btn btn-primary btn-lg">Sign Up Now!</button>{{/link-to}}
       </div>
     </div>
       <!-- /.col-lg-4 -->
@@ -43,7 +50,7 @@
         <div class="whitebox">
         <br />
         <img class="img-circle" src="https://images.unsplash.com/photo-1493407722824-9bbffff3b954?auto=format&fit=crop&w=3296&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Generic placeholder image" width="140" height="140">
-        <h2>Heading</h2>
+        <h2>Notes</h2>
         <p>Donec sed odio dui. Cras justo odio,
           dapibus ac facilisis in, egestas eget quam.
           Vestibulum id ligula porta
@@ -53,6 +60,7 @@
            ut fermentum massa justo sit amet
           risus.
         </p>
+        {{#link-to "sign-up"}}<button type="button" class="btn btn-primary btn-lg">Sign Up Now!</button>{{/link-to}}
       </div>
       </div>
     </div>
