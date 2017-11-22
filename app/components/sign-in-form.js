@@ -9,4 +9,6 @@ export default Ember.Component.extend({
       this.sendAction('submit', this.get('credentials'));
     },
   },
+  willDestroyElement () {
+  }
 });

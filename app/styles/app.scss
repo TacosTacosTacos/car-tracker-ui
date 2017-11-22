@@ -51,7 +51,11 @@ footer {
 }
 
 .jumbotron {
-  background-color: $page-background;
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-color: black;
+  border-style: solid;
 }
 
 .footer {

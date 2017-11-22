@@ -14,11 +14,11 @@ export default Ember.Route.extend({
       .then(() => this.transitionTo('user-dashboard'))
       .then(() => {
         this.get('flashMessages')
-        .success('Successfully signed-up! You have also been signed-in.');
+        .success('Congratulations on becoming a new user!');
       })
       .catch(() => {
         this.get('flashMessages')
-        .danger('There was a problem. Please try again.');
+        .danger('An unexpected problem occured. Please try again.');
       });
     },
   },
