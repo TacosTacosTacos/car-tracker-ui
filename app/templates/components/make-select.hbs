@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label for="carMake" class="">Car Make:</label>
+  <div class="">
+    <select id="carMake" class="dropdown form-control" onchange={{action "setSelection" value="target.value"}}>
+      <option disabled selected> -- Select a Make! -- </option>
+      {{#each model as |make|}}
+        <option value={{make.nhtsa_make_id}}>{{make.make_name}}</option>
+      {{/each}}
+    </select>
+  </div>
+</div>

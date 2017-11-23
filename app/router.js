@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('user-dashboard');
   this.route('users');
+  this.route('sign-up-p1');
 });
 
 export default Router;
