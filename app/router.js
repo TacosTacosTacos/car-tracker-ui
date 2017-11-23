@@ -12,6 +12,8 @@ Router.map(function () {
   this.route('user-dashboard');
   this.route('users');
   this.route('sign-up-p1');
+  this.route('sign-up-p2');
+  this.route('sign-up-p3');
 });
 
 export default Router;
