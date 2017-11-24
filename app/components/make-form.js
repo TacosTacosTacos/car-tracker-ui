@@ -13,11 +13,11 @@ export default Ember.Component.extend({
         this.$('#carMake').focus();
       } else {
         // Store the entered data
-        var myModel =  this.get('model');
-        console.log(myModel.content[0]._data.nhtsa_make_id)
+        const myModel =  this.get('model');
+        console.log(myModel.content[0]._data.nhtsa_make_id);
 
-        var filteredMake = myModel.content.filter((internalModel) => {
-         return internalModel._data.nhtsa_make_id == this.get('makeform.nhtsa_make_id')
+        const filteredMake = myModel.content.filter((internalModel) => {
+         return internalModel._data.nhtsa_make_id == this.get('makeform.nhtsa_make_id');
        })[0].id;
 
         this.get('signupstorage').set('make_id', filteredMake);
