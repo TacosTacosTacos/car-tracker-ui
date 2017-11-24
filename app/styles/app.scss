@@ -2,6 +2,7 @@
 @import 'bootstrap/theme';
 @import url('https://netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 $page-background:  #f0f0f5;
 $header-background: #d1d1e0;
@@ -16,6 +17,7 @@ html {
 }
 
 body {
+  // background-color: #363636;
   background-color: $page-background;
   font-family: 'Quicksand', sans-serif;
   margin-bottom: 60px; //* Margin bottom by footer height */
@@ -32,7 +34,7 @@ body {
   background-color: $whitebox-color;
   border-color: $whitebox-border-color;
   border-style: solid;
-  box-shadow: 5px 5px 5px $black-shadow;
+  // box-shadow: 5px 5px 5px $black-shadow;
   margin-bottom: .5em;
   margin-right: .5em;
   padding: 1em;
@@ -61,7 +63,7 @@ body {
 
 .jumbotron .jumbo-background {
   background: url('https://images.unsplash.com/photo-1445966275305-9806327ea2b5?auto=format&fit=crop&w=3000&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
-  background-position: 50% 45%;
+  background-position: 50% 39%;
   background-size: cover;
   border-color: $whitebox-border-color;
   border-style: solid;
@@ -92,19 +94,27 @@ body {
 
 .headline {
   color: $page-background;
-  font-size: 2.5em;
+  font-family: 'Oswald';
+  font-size: 5em;
   font-weight: 800;
   text-align: center;
   text-shadow: 0px 0px 3px $text-shadow, -1px -1px $text-shadow, 1px 1px $text-shadow;
+  line-height: 1em;
+
+}
+
+.box-title {
+   font-weight: 900;
 }
 
 .subheadline {
   color: $page-background;
-  font-size: 1.5em;
+  font-size: 1.8em;
+  font-family: 'Oswald';
   font-style: italic;
-  font-weight: 900;
+  // font-weight: 900;
   text-align: center;
-  text-shadow: 0px 0px 3px $text-shadow, -1px -1px $text-shadow, 1px 1px $text-shadow;
+  text-shadow: 0px 0px 2px $text-shadow, -1px -1px $text-shadow, 1px 1px $text-shadow;
 }
 
 .marketing {
