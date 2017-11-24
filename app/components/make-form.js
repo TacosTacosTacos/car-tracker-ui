@@ -20,7 +20,7 @@ export default Ember.Component.extend({
         this.sendAction('submit');
       }
 
-      console.log(this.get('makeform'))
+      console.log(this.get('makeform'));
       // this.sendAction('submit', this.get('makeform'));
     },
   },

@@ -9,7 +9,7 @@ export default Ember.Component.extend({
       // Store the entered data
       this.get('signupstorage').set('carModel', this.get('modelform.carModel'));
       this.get('signupstorage').set('carLabel', this.get('modelform.carLabel'));
-      this.get('signupstorage').set('mileage', this.get('modelform.mileage'));
+      // this.get('signupstorage').set('mileage', this.get('modelform.mileage'));
       // Navigate to the next form
       this.sendAction('submit');
     },

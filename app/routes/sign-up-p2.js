@@ -10,7 +10,7 @@ export default Ember.Route.extend({
   actions: {
     submit () {
       // Transition to the next signup screen
-      this.transitionTo('sign-up-p3')
+      this.transitionTo('sign-up-p3');
     },
   },
   beforeModel () {
