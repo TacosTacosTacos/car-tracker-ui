@@ -14,6 +14,7 @@ Router.map(function () {
   this.route('sign-up-p1');
   this.route('sign-up-p2');
   this.route('sign-up-p3');
+  this.route('mileage');
 });
 
 export default Router;
