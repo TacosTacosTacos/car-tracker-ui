@@ -1,0 +1,28 @@
+<form id="model-form" class="col-md-offset-4 col-md-4 form-horizontal" {{action "submit" on='submit'}}>
+<legend>Mileage Details</legend>
+  <div class="">
+
+
+<p>car_id</p>
+<input id="car_id" type="number">
+
+{{purchase-date-input}}
+
+{{gas-gallons-input}}
+
+{{current-mileage-input}}
+
+{{gas-price-input}}
+
+    <div class="container row">
+      <div class="col-sm-3">
+        {{#link-to "mileage"}}
+          <button type="button" class="btn btn-lg btn-block btn-warning">Previous</button>
+        {{/link-to}}
+      </div>
+      <div class="col-sm-3">
+        <button type="submit" class="btn btn-lg btn-block btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</form>
