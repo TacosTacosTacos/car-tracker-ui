@@ -6,4 +6,5 @@ export default DS.Model.extend({
   gallons_of_gas: DS.attr('number'),
   trip_miles: DS.attr('number'),
   price_of_gas: DS.attr('number'),
+  car: DS.attr(),
 });

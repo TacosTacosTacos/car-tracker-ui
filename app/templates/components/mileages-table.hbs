@@ -2,6 +2,7 @@
 <table class="table table-hover table-striped table-bordered table-condensed">
   <thead>
     <tr class="active">
+      <th>Car</th>
       <th>Purchase Date</th>
       <th>Gallons of Gas</th>
       <th>Trip Miles</th>
@@ -14,6 +15,7 @@
     <tbody>
       {{#each model as |mileage|}}
       <tr>
+        <td>{{mileage.car.model}} - {{mileage.car.label}}</td>
         <td>{{moment-format mileage.purchase_date 'MM-DD-YYYY'}}</td>
         <td>{{number-format mileage.gallons_of_gas decimals=1}}</td>
         <td>{{number-format mileage.trip_miles}}</td>

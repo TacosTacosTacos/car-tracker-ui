@@ -16,7 +16,10 @@ export default Ember.Component.extend({
     }
     },
   },
+  didRender () {
+  },
   willDestroyElement () {
     this.set('mileage', {});
+    console.log(this.get('mileage'))
   },
 });
