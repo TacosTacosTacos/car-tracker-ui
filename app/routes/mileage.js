@@ -6,6 +6,12 @@ export default Ember.Route.extend({
   model () {
     return this.get('store').findAll('mileage');
   },
+  actions: {
+    deleteMileageRecord (mileageInfo) {
+      console.log('mileageinfo', mileageInfo);
+      mileageInfo.destroyRecord();
+    },
+  },
   beforeModel () {
     if (!this.get('auth.credentials.token')) {
       this.transitionTo('/sign-in');

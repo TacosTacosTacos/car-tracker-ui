@@ -18,9 +18,10 @@
         <td>{{number-format mileage.gallons_of_gas decimals=1}}</td>
         <td>{{number-format mileage.trip_miles}}</td>
         <td>${{number-format mileage.price_of_gas}}</td>
-        <td>{{div mileage.trip_miles mileage.gallons_of_gas}}</td>
-        <td>${{div mileage.price_of_gas (div mileage.trip_miles mileage.gallons_of_gas)}}</td>
-        <td><button type="button" class="btn btn-warning">Edit</button>&nbsp;<button type="button" class="btn btn-danger">Delete</button></td>
+        <td>{{number-format (div mileage.trip_miles mileage.gallons_of_gas)}}</td>
+        <td>${{number-format (div mileage.price_of_gas (div mileage.trip_miles mileage.gallons_of_gas))}}</td>
+        <td><button type="button" class="btn btn-warning">Edit</button>
+          &nbsp;<button type="button" class="btn btn-danger" {{action 'deleteMileageRecord' mileage}}>Delete</button></td>
       </tr>
       {{/each}}
     </tbody>
