@@ -10,6 +10,12 @@ export default Ember.Route.extend({
     mileage: this.get('store').findRecord('mileage', params.mileage_id)
   });
 },
+actions: {
+  submit (mileageInfo) {
+    mileageInfo.save()
+    this.transitionTo('mileage');
+  },
+},
   beforeModel () {
     if (!this.get('auth.credentials.token')) {
       this.transitionTo('/sign-in');
