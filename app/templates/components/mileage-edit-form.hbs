@@ -1,0 +1,28 @@
+
+{{model.car_id}}
+<form id="model-form" class="col-md-offset-4 col-md-4 form-horizontal" {{action "submit" on='submit'}}>
+<legend>Mileage Details</legend>
+  <div class="">
+
+{{car-select model=model.cars selectedOption=model.car_id}}
+
+{{purchase-date-input purchase_date=model.mileage.purchase_date}}
+
+{{gas-gallons-input gallons_of_gas=model.mileage.gallons_of_gas}}
+
+{{current-mileage-input trip_miles=model.mileage.trip_miles}}
+
+{{gas-price-input price_of_gas=model.mileage.price_of_gas}}
+
+    <div class="container row">
+      <div class="col-sm-3">
+        {{#link-to "mileage"}}
+          <button type="button" class="btn btn-lg btn-block btn-warning">Previous</button>
+        {{/link-to}}
+      </div>
+      <div class="col-sm-3">
+        <button type="submit" class="btn btn-lg btn-block btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</form>
