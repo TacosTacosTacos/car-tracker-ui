@@ -17,6 +17,7 @@ Router.map(function () {
   this.route('mileage');
   this.route('create-a-new-mileage-record');
   this.route('editmileage', {path: '/mileage/:mileage_id'});
+  this.route('maintenance');
 });
 
 export default Router;
