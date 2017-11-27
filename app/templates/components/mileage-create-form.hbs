@@ -2,17 +2,15 @@
 <legend>Mileage Details</legend>
   <div class="">
 
+{{car-select model=model selectedOption=mileage.car_id}}
 
-<p>car_id</p>
-<input id="car_id" type="number">
+{{purchase-date-input purchase_date=mileage.purchase_date}}
 
-{{purchase-date-input}}
+{{gas-gallons-input gallons_of_gas=mileage.gallons_of_gas}}
 
-{{gas-gallons-input}}
+{{current-mileage-input trip_miles=mileage.trip_miles}}
 
-{{current-mileage-input}}
-
-{{gas-price-input}}
+{{gas-price-input price_of_gas=mileage.price_of_gas}}
 
     <div class="container row">
       <div class="col-sm-3">
