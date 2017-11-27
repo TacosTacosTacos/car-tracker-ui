@@ -14,7 +14,6 @@ export default Ember.Component.extend({
       } else {
         // Store the entered data
         const myModel =  this.get('model');
-        console.log(myModel.content[0]._data.nhtsa_make_id);
 
         const filteredMake = myModel.content.filter((internalModel) => {
          return internalModel._data.nhtsa_make_id == this.get('makeform.nhtsa_make_id');
@@ -27,7 +26,6 @@ export default Ember.Component.extend({
         this.sendAction('submit');
       }
 
-      console.log(this.get('makeform'));
       // this.sendAction('submit', this.get('makeform'));
     },
   },

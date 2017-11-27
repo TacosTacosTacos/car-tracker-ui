@@ -12,7 +12,7 @@ export default Ember.Route.extend({
 },
 actions: {
   submit (mileageInfo) {
-    mileageInfo.save()
+    mileageInfo.save();
     this.transitionTo('mileage');
   },
 },

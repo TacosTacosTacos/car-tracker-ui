@@ -11,7 +11,6 @@ export default Ember.Component.extend({
         .warning('You Must Select A Car');
         this.$('#car').focus();
       } else {
-      console.log(this.get('mileage'))
       this.sendAction('submit', this.get('mileage'));
     }
     },
@@ -20,6 +19,5 @@ export default Ember.Component.extend({
   },
   willDestroyElement () {
     this.set('mileage', {});
-    console.log(this.get('mileage'))
   },
 });

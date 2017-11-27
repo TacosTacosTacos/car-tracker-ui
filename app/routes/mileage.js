@@ -5,7 +5,6 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
   model () {
     return this.get('store').findAll('mileage').then(mileage => mileage.sortBy('purchase_date'));
-    ;
   },
   actions: {
     deleteMileageRecord (mileageInfo) {
@@ -21,7 +20,7 @@ export default Ember.Route.extend({
       });
     },
     editMileageRecord (mileageInfo) {
-      this.transitionTo('editmileage', mileageInfo)
+      this.transitionTo('editmileage', mileageInfo);
     },
   },
   beforeModel () {

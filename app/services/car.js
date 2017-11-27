@@ -6,7 +6,7 @@ export default Ember.Service.extend({
   credentials: storageFor('auth'),
   signupstorage: storageFor('sign-up'),
 
-  createCar (signupstorage) {
+  createCar () {
     return this.get('ajax').post('/cars', {
       data: {
         car: {
