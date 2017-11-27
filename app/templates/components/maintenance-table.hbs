@@ -1,0 +1,36 @@
+<div class="table-responsive">
+<table class="table table-hover table-striped table-bordered table-condensed">
+  <thead>
+    <tr class="active">
+      <th>Car</th>
+      <th>Service Date</th>
+      <th>Service Type</th>
+      <th>Current Mileage</th>
+      <th>Notes</th>
+      <th>Controls</th>
+    </tr>
+  </thead>
+    <tbody>
+      {{#each model as |service|}}
+      <tr>
+        <td>{{service.car.model}} - {{service.car.label}}</td>
+        <td>{{moment-format service.service_date 'MM-DD-YYYY'}}</td>
+        <td>{{service.service_type.name}}</td>
+        <td>{{number-format service.current_mileage}}</td>
+        <td>{{service.notes}}</td>
+        <td><button type="button" class="btn btn-warning" {{action 'editServiceRecord' service.id}}>Edit</button>
+          &nbsp;<button type="button" class="btn btn-danger" {{action 'deleteServiceRecord' service}}>Delete</button></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+<div class="row center-controls">
+{{#link-to "user-dashboard"}}
+  <button class="btn btn-warning btn-lg extra-bottom-margin" type="button">Return to Dashboard</button>
+{{/link-to}}
+&nbsp;
+{{#link-to "create-a-new-maintenance-record"}}
+  <button class="btn btn-primary btn-lg" type="button">Create A New Maintenance Record</button>
+{{/link-to}}
+</div>
