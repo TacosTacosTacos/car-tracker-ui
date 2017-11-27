@@ -2,7 +2,6 @@
 <form id="model-form" class="col-md-offset-4 col-md-4 form-horizontal" {{action "submit" on='submit'}}>
 <legend>Mileage Details</legend>
   <div class="">
-    {{model.mileage.car_id}}
 {{car-select model=model.cars selectedOption=model.mileage.car_id}}
 
 {{purchase-date-input purchase_date=model.mileage.purchase_date}}

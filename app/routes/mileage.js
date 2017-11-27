@@ -4,7 +4,8 @@ export default Ember.Route.extend({
   auth: Ember.inject.service(),
   flashMessages: Ember.inject.service(),
   model () {
-    return this.get('store').findAll('mileage');
+    return this.get('store').findAll('mileage').then(mileage => mileage.sortBy('purchase_date'));
+    ;
   },
   actions: {
     deleteMileageRecord (mileageInfo) {
