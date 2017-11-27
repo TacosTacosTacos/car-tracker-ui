@@ -20,7 +20,7 @@
         <td>${{number-format mileage.price_of_gas}}</td>
         <td>{{number-format (div mileage.trip_miles mileage.gallons_of_gas)}}</td>
         <td>${{number-format (div mileage.price_of_gas (div mileage.trip_miles mileage.gallons_of_gas))}}</td>
-        <td><button type="button" class="btn btn-warning">Edit</button>
+        <td><button type="button" class="btn btn-warning" {{action 'editMileageRecord' mileage}}>Edit</button>
           &nbsp;<button type="button" class="btn btn-danger" {{action 'deleteMileageRecord' mileage}}>Delete</button></td>
       </tr>
       {{/each}}

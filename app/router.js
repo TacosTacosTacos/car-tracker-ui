@@ -16,6 +16,7 @@ Router.map(function () {
   this.route('sign-up-p3');
   this.route('mileage');
   this.route('create-a-new-mileage-record');
+  this.route('editmileage', {path: '/mileage/:mileage_id'});
 });
 
 export default Router;

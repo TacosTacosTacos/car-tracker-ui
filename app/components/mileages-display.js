@@ -5,5 +5,8 @@ export default Ember.Component.extend({
     deleteMileageRecord (mileageInfo) {
       this.sendAction('deleteMileageRecord', mileageInfo)
     },
+    editMileageRecord (mileageInfo) {
+      this.sendAction('editMileageRecord', mileageInfo)
+    },
   },
 });

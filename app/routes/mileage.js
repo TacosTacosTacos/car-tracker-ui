@@ -8,8 +8,19 @@ export default Ember.Route.extend({
   },
   actions: {
     deleteMileageRecord (mileageInfo) {
-      console.log('mileageinfo', mileageInfo);
-      mileageInfo.destroyRecord();
+      mileageInfo.destroyRecord()
+      .then(() => this.transitionTo('mileage'))
+      .then(() => {
+        this.get('flashMessages')
+        .success('Your record has been deleted');
+      })
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('An unexpected problem occured. Please try again.');
+      });
+    },
+    editMileageRecord (mileageInfo) {
+      this.transitionTo('editmileage', mileageInfo)
     },
   },
   beforeModel () {
