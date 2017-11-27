@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label for="service-type" class="">Service Type:</label>
+  <div class="">
+    <select id="service-type" class="dropdown form-control" onchange={{action "setSelection" value="target.value"}}>
+      <option disabled selected> -- Select a Service Type! -- </option>
+      {{#each model as |service|}}
+        <option value={{service.id}}>{{service.name}}</option>
+      {{/each}}
+    </select>
+  </div>
+</div>

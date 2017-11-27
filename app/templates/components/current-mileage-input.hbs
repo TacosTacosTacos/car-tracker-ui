@@ -1,13 +1,12 @@
 <div class="form-group">
-  <label for="mileage" class="">Trip Mileage:</label>
+  <label for="mileage" class="">Current Mileage:</label>
   <div class="">
     {{input type="number"
         id="mileage"
         class="form-control"
-        value=trip_miles
-         min='0'
-         max='200'
-         placeholder='Ex. 100'
-        required=true}}
+        value=current_mileage
+         min='1'
+         max='300000'
+         placeholder='Ex. 40000'}}
   </div>
 </div>
