@@ -1,21 +1,16 @@
 
 <form id="model-form" class="col-md-offset-4 col-md-4 form-horizontal" {{action "submit" on='submit'}}>
-<legend>Edit Mileage Record</legend>
+<legend>Edit Maintenance Record</legend>
   <div class="">
-
-{{car-select model=model.cars selectedOption=model.mileage.car_id}}
-
-{{purchase-date-input purchase_date=model.mileage.purchase_date}}
-
-{{gas-gallons-input gallons_of_gas=model.mileage.gallons_of_gas}}
-
-{{trip-mileage-input trip_miles=model.mileage.trip_miles}}
-
-{{gas-price-input price_of_gas=model.mileage.price_of_gas}}
+    {{car-select model=model.cars selectedOption=model.maintenance.car_id}}
+    {{service-type-select model=model.service_types selectedOption=model.maintenance.service_type_id}}
+    {{service-date-input service_date=model.maintenance.service_date}}
+    {{current-mileage-input current_mileage=model.maintenance.current_mileage}}
+    {{notes-input notes=model.maintenance.notes}}
 
     <div class="container row">
       <div class="col-sm-3">
-        {{#link-to "mileage"}}
+        {{#link-to "maintenance"}}
           <button type="button" class="btn btn-lg btn-block btn-warning">Previous</button>
         {{/link-to}}
       </div>
