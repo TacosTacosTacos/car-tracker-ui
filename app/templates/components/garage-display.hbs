@@ -1,10 +1,10 @@
 <h1>My Garage</h1>
 <br />
-<div class="container">
-  <div class="">
+<div class="container-fluid">
+  <div class="row">
     {{#each model as |car|}}
-      <div class="col-sm-5 col-centered">
-        <div class="whitebox center-controls">
+      <div class="col-centered col-sm-4">
+        <div class="whitebox center-controls ">
           {{!-- {{car.id}} --}}
           <h3 class="underline">{{car.label}}</h3>
           <div>
@@ -17,7 +17,10 @@
             <h4>Car Year: {{car.year}}</h4>
           </div>
           <div>
-            <button class="btn btn-primary btn-lg extra-bottom-margin" type="button">Edit Settings</button>
+            {{car.id}}
+            {{#link-to "edit-car" car.id}}
+              <button class="btn btn-primary btn-lg extra-bottom-margin" type="button">Edit Car Properties</button>
+            {{/link-to}}
           </div>
         </div>
       </div>

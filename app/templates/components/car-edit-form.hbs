@@ -1,0 +1,19 @@
+<form id="car-form" class="col-md-offset-4 col-md-4 form-horizontal" {{action "submit" on='submit'}}>
+<legend>Edit Car Record</legend>
+  <div class="">
+    {{garage-make-select model=model.makes selectedOption=model.carRecord.make_id}}
+    {{car-year-input year=model.carRecord.year}}
+    {{model-input carModel=model.carRecord.model}}
+    {{car-label-input carLabel=model.carRecord.label}}
+    <div class="container row">
+      <div class="col-sm-3">
+        {{#link-to "garage"}}
+          <button type="button" class="btn btn-lg btn-block btn-warning">Previous</button>
+        {{/link-to}}
+      </div>
+      <div class="col-sm-3">
+        <button type="submit" class="btn btn-lg btn-block btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</form>

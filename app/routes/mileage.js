@@ -21,6 +21,7 @@ export default Ember.Route.extend({
       });
     },
     editMileageRecord (mileageInfo) {
+      console.log(mileageInfo)
       this.transitionTo('editmileage', mileageInfo);
     },
   },

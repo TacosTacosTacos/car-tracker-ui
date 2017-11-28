@@ -1,7 +1,7 @@
 <div class="form-group">
   <label for="carMake" class="">Car Make:</label>
   <div class="">
-    <select id="carMake" class="dropdown form-control" onchange={{action "setSelection" value="target.value"}}>
+    <select id="carMake" class="dropdown form-control" value="target.value" onchange={{action "setSelection" value="target.value"}}>
       <option disabled selected> -- Select a Make! -- </option>
       {{#each model as |make|}}
         <option value={{make.id}}>{{make.make_name}}</option>

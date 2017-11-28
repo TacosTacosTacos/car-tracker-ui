@@ -22,6 +22,7 @@ Router.map(function () {
   this.route('create-a-new-maintenance-record');
   this.route('garage');
   this.route('create-a-new-car-record');
+  this.route('edit-car', {path: '/garage/:car_id'});
 });
 
 export default Router;
