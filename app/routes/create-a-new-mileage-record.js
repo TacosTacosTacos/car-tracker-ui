@@ -10,6 +10,9 @@ export default Ember.Route.extend({
     });
   },
   actions: {
+    willTransition (transition) {
+      this.controller.model.mileageRecord.deleteRecord()
+    },
     createMileages (mileageInfo) {
       mileageInfo.save()
       .then(() => this.transitionTo('mileage'))

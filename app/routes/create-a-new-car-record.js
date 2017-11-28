@@ -9,6 +9,9 @@ export default Ember.Route.extend({
     });
   },
   actions: {
+    willTransition (transition) {
+      this.controller.model.carRecord.deleteRecord()
+    },
     createCar (carInfo) {
       carInfo.save()
       .then(() => this.transitionTo('garage'))
