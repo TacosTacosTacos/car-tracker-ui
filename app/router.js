@@ -20,6 +20,7 @@ Router.map(function () {
   this.route('maintenance');
   this.route('editmaintenance', {path: '/maintenance/:service_id'});
   this.route('create-a-new-maintenance-record');
+  this.route('garage');
 });
 
 export default Router;
