@@ -1,0 +1,35 @@
+<h1>My Garage</h1>
+<br />
+<div class="container">
+  <div class="">
+    {{#each model as |car|}}
+      <div class="col-sm-5 col-centered">
+        <div class="whitebox center-controls">
+          {{!-- {{car.id}} --}}
+          <h3 class="underline">{{car.label}}</h3>
+          <div>
+            <h4>Car Make: {{car.make.make_name}}</h4>
+          </div>
+          <div>
+            <h4>Car Model: {{car.model}}</h4>
+          </div>
+          <div>
+            <h4>Car Year: {{car.year}}</h4>
+          </div>
+          <div>
+            <button class="btn btn-primary btn-lg extra-bottom-margin" type="button">Edit Settings</button>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+<br />
+<div class="row center-controls">
+  {{#link-to "user-dashboard"}}
+    <button class="btn btn-warning btn-lg extra-bottom-margin" type="button">Return to Dashboard</button>
+  {{/link-to}}
+  &nbsp;&nbsp;
+  <button class="btn btn-primary btn-lg extra-bottom-margin" type="button">Store a New Car</button>
+
+</div>

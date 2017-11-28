@@ -4,4 +4,5 @@ export default DS.Model.extend({
   year: DS.attr(),
   label: DS.attr(),
   model: DS.attr(),
+  make: DS.attr(),
 });
