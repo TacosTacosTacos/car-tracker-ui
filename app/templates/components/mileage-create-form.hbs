@@ -2,15 +2,15 @@
 <legend>Create Mileage Record</legend>
   <div class="">
 
-{{car-select model=model selectedOption=mileage.car_id}}
+{{car-select model=model.cars selectedOption=model.mileageRecord.car_id}}
 
-{{purchase-date-input purchase_date=mileage.purchase_date}}
+{{purchase-date-input purchase_date=model.mileageRecord.purchase_date}}
 
-{{gas-gallons-input gallons_of_gas=mileage.gallons_of_gas}}
+{{gas-gallons-input gallons_of_gas=model.mileageRecord.gallons_of_gas}}
 
-{{trip-mileage-input trip_miles=mileage.trip_miles}}
+{{trip-mileage-input trip_miles=model.mileageRecord.trip_miles}}
 
-{{gas-price-input price_of_gas=mileage.price_of_gas}}
+{{gas-price-input price_of_gas=model.mileageRecord.price_of_gas}}
 
     <div class="container row">
       <div class="col-sm-3">

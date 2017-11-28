@@ -1,30 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  service: {},
-
   actions: {
     submit () {
-
-      console.log(this.get('service'))
-
-      if(!this.get('service.car_id')) {
+      if(!this.get('model.maintenanceRecord.car_id')) {
         // error handling for the make dropdown
         this.get('flashMessages')
         .warning('You Must Select A Car');
         this.$('#car').focus();
-      } else if (!this.get('service.service_type_id')) {
+      } else if (!this.get('model.maintenanceRecord.service_type_id')) {
         this.get('flashMessages')
         .warning('You Must Select A Service Type');
         this.$('#service-type').focus();
       } else {
-        this.sendAction('submit', this.get('service'));
+        this.sendAction('submit', this.get('model.maintenanceRecord'));
       }
     },
-  },
-  didRender () {
-  },
-  willDestroyElement () {
-    this.set('service', {});
   },
 });

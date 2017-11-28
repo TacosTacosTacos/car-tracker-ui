@@ -6,21 +6,14 @@ export default Ember.Route.extend({
   model () {
     return RSVP.hash({
       cars: this.get('store').findAll('car'),
-      service_types: this.get('store').findAll('service-type')
+      service_types: this.get('store').findAll('service-type'),
+      maintenanceRecord: this.get('store').createRecord('service', {})
     });
   },
 
   actions: {
     createService (serviceInfo) {
-
-      let maintenanceRecord = this.get('store').createRecord('service', {
-        car_id: serviceInfo.car_id,
-        service_type_id: serviceInfo.service_type_id,
-        service_date: serviceInfo.service_date,
-        current_mileage: serviceInfo.current_mileage,
-        notes: serviceInfo.notes,
-      });
-      maintenanceRecord.save()
+      serviceInfo.save()
       .then(() => this.transitionTo('maintenance'))
       .then(() => {
         this.get('flashMessages')
@@ -32,9 +25,9 @@ export default Ember.Route.extend({
       });
     },
   },
-  beforeModel () {
+  afterModel () {
     if (this.get('auth.credentials.token')) {
       this.transitionTo('user-dashboard');
     }
-  }
+  },
 });

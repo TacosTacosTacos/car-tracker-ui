@@ -1,20 +1,17 @@
 import Ember from 'ember';
+import RSVP from 'rsvp';
 
 export default Ember.Route.extend({
   mileage: Ember.inject.service(),
   model () {
-    return this.get('store').findAll('car');
+    return RSVP.hash({
+      cars: this.get('store').findAll('car'),
+      mileageRecord: this.get('store').createRecord('mileage', {})
+    });
   },
   actions: {
     createMileages (mileageInfo) {
-      let mileageRecord = this.get('store').createRecord('mileage', {
-        car_id: mileageInfo.car_id,
-        purchase_date: mileageInfo.purchase_date,
-        gallons_of_gas: mileageInfo.gallons_of_gas,
-        trip_miles: mileageInfo.trip_miles,
-        price_of_gas: mileageInfo.price_of_gas,
-      });
-      mileageRecord.save()
+      mileageInfo.save()
       .then(() => this.transitionTo('mileage'))
       .then(() => {
         this.get('flashMessages')

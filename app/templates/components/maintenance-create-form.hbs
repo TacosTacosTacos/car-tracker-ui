@@ -2,11 +2,11 @@
 <legend>Create Maintenance Record</legend>
   <div class="">
 
-{{car-select model=model.cars selectedOption=service.car_id}}
-{{service-type-select model=model.service_types selectedOption=service.service_type_id}}
-{{service-date-input service_date=service.service_date}}
-{{current-mileage-input current_mileage=service.current_mileage}}
-{{notes-input notes=service.notes}}
+{{car-select model=model.cars selectedOption=model.maintenanceRecord.car_id}}
+{{service-type-select model=model.service_types selectedOption=model.maintenanceRecord.service_type_id}}
+{{service-date-input service_date=model.maintenanceRecord.service_date}}
+{{current-mileage-input current_mileage=model.maintenanceRecord.current_mileage}}
+{{notes-input notes=model.maintenanceRecord.notes}}
 
     <div class="container row">
       <div class="col-sm-3">
