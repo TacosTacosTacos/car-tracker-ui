@@ -5,4 +5,5 @@ export default DS.Model.extend({
   label: DS.attr(),
   model: DS.attr(),
   make: DS.attr(),
+  make_id: DS.attr()
 });
