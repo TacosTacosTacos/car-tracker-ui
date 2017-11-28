@@ -9,6 +9,7 @@ export default Ember.Route.extend({
   actions: {
     deleteMileageRecord (mileageInfo) {
       mileageInfo.destroyRecord()
+      .then(() => this.refresh())
       .then(() => this.transitionTo('mileage'))
       .then(() => {
         this.get('flashMessages')

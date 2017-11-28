@@ -9,6 +9,7 @@ export default Ember.Route.extend({
   actions: {
     deleteServiceRecord (serviceInfo) {
       serviceInfo.destroyRecord()
+      .then(() => this.refresh())
       .then(() => this.transitionTo('maintenance'))
       .then(() => {
         this.get('flashMessages')

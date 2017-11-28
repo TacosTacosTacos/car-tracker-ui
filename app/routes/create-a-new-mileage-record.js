@@ -7,7 +7,14 @@ export default Ember.Route.extend({
   },
   actions: {
     createMileages (mileageInfo) {
-      this.get('mileage').createMileages(mileageInfo)
+      let mileageRecord = this.get('store').createRecord('mileage', {
+        car_id: mileageInfo.car_id,
+        purchase_date: mileageInfo.purchase_date,
+        gallons_of_gas: mileageInfo.gallons_of_gas,
+        trip_miles: mileageInfo.trip_miles,
+        price_of_gas: mileageInfo.price_of_gas,
+      });
+      mileageRecord.save()
       .then(() => this.transitionTo('mileage'))
       .then(() => {
         this.get('flashMessages')
