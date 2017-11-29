@@ -48,6 +48,7 @@
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.1.1",
     "ember-font-awesome": "^4.0.0-alpha.14",
+    "ember-konami-code": "^1.0.0",
     "ember-load-initializers": "^0.6.3",
     "ember-local-storage": "^1.3.3",
     "ember-math-helpers": "^2.3.0",
