@@ -244,6 +244,6 @@ p > .marketing {
 }
 
 .vibrate-3 {
-	-webkit-animation: vibrate-3 0.5s linear both;
-	        animation: vibrate-3 0.5s linear both;
+	-webkit-animation: vibrate-3 0.5s linear 15 both;
+	        animation: vibrate-3 0.5s linear 15 both;
 }
