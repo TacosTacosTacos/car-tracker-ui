@@ -10,7 +10,6 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('user-dashboard');
-  this.route('users');
   this.route('sign-up-p1');
   this.route('sign-up-p2');
   this.route('sign-up-p3');

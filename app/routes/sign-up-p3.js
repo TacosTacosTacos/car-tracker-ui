@@ -8,12 +8,12 @@ export default Ember.Route.extend({
   credentials: storageFor('auth'),
   signupstorage: storageFor('sign-up'),
 
-// TODO: Submit request for creating car record in the database
   actions: {
     signUp (credentials) {
       this.get('auth').signUp(credentials)
       .then(() => this.get('auth').signIn(credentials))
       .then(() => this.get('car').createCar())
+      .then(() => this.get('signupstorage').reset())
       .then(() => this.get('auth.credentials').set('hideConfetti', false))
       .then(() => this.transitionTo('user-dashboard'))
       .then(() => {
