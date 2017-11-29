@@ -5,7 +5,6 @@
     {{#each model as |car|}}
       <div class="col-centered col-sm-4">
         <div class="whitebox center-controls ">
-          {{!-- {{car.id}} --}}
           <h3 class="underline">{{car.label}}</h3>
           <div>
             <h4>Car Make: {{car.make.make_name}}</h4>
@@ -17,7 +16,6 @@
             <h4>Car Year: {{car.year}}</h4>
           </div>
           <div>
-            {{car.id}}
             {{#link-to "edit-car" car.id}}
               <button class="btn btn-primary btn-lg extra-bottom-margin" type="button">Edit Car Properties</button>
             {{/link-to}}
