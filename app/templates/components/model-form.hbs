@@ -1,7 +1,8 @@
 <form id="model-form" class="col-md-offset-4 col-md-4 form-horizontal" {{action "submit" on='submit'}}>
 <legend>Additional Car Details</legend>
   <div class="">
-    {{model-input carModel=modelform.carModel}}
+    {{!-- {{model-input carModel=modelform.carModel}} --}}
+    {{car-model-select carModels=signupstorage.carModels selectedOption=modelform.carModel}}
     {{car-label-input carLabel=modelform.carLabel}}
     {{!-- {{current-mileage-input mileage=modelform.mileage}} --}}
     <div class="container row">

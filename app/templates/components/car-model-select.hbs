@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label for="carModel" class="">Car Model:</label>
+  <div class="">
+    <select id="carModel" class="dropdown form-control" onchange={{action "setSelection" value="target.value"}}>
+      <option disabled selected> -- Select a Car Model! -- </option>
+      {{#each carModels as |carModel|}}
+        <option value={{carModel}}>{{carModel}}</option>
+      {{/each}}
+    </select>
+  </div>
+</div>
