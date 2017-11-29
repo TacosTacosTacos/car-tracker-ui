@@ -11,7 +11,7 @@ https://car-tracker-api.herokuapp.com/
 https://github.com/TacosTacosTacos/final_project_api
 
 ## Technologies Used
-HTML 5; CSS3; Bootstap 3; Ember; ember-confetti;
+HTML 5; CSS3; Bootstap 3; Ember; ember-confetti; ember-konami-code;
 
 Photos from unsplash.com
 
