@@ -9,8 +9,10 @@ export default Ember.Route.extend({
     });
   },
   actions: {
-    willTransition (transition) {
-      this.controller.model.carRecord.deleteRecord()
+    willTransition () {
+      if (!this.controller.model.carRecord.id) {
+        this.controller.model.carRecord.deleteRecord();
+      }
     },
     createCar (carInfo) {
       carInfo.save()

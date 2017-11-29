@@ -12,8 +12,10 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    willTransition (transition) {
-      this.controller.model.maintenanceRecord.deleteRecord()
+    willTransition () {
+      if (!this.controller.model.maintenanceRecord.id) {
+        this.controller.model.maintenanceRecord.deleteRecord();
+      }
     },
     createService (serviceInfo) {
       serviceInfo.save()
