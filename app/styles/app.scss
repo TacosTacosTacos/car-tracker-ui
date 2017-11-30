@@ -124,6 +124,9 @@ body {
 
 }
 
+
+
+
 .box-title {
    font-weight: 900;
 }
@@ -137,6 +140,17 @@ body {
   text-align: center;
   text-shadow: 0px 0px 2px $text-shadow, -1px -1px $text-shadow, 1px 1px $text-shadow;
 }
+
+@media screen and (max-width: 500px) {
+    .headline {
+        font-size: 3.5em; /* 0.8x default size */
+        }
+
+    .subheadline {
+        font-size: 1.5em; /* 0.8x default size */
+        }
+
+    }
 
 .marketing {
   text-align: center;
