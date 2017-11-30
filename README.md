@@ -21,7 +21,7 @@ Before starting the project, I knew that I was going to have issues with Ember. 
 Once I began to work on the project, as expected, I ran into problems.  My strategy for solving problems was to try to work through them myself as much as possible.  If I felt like I was getting no where, I moved onto another piece of functionality that needed to be completed.  If I still couldn't resolve the problem after going back to it, I entered a ticket.
 
 ## List unsolved problems which would be fixed in future iterations.
-I still don't understand the proper way to clear out data bindings in ember.  I had many issues where forms wouldn't reset there data even through I emptied them out during the destroy component hook.  Due to the issues that I had with ember data binding, there were features that I ran out of time, so I couldn't implement.
+In the end there were no unsolved problems.  There were just things that I didn't have time to implement since I had to spend more time than originally planned working on solving problems.  Now that I have a better grasp of how ember handles data, I will be able to work with it more efficiently next time.
 
 - The NHTSA has an API available for car information.  The quality of data is very mixed (doesn't have very old cars)  Due to this, the application just implements it on signup.  Model information can be overwritten on login.
 - The functionality to delete cars isn't implemented.  I actually would only soft expire records if the project requirements would allow me to skip doing delete actions.
