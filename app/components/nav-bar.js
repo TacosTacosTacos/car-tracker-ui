@@ -11,8 +11,8 @@ export default Ember.Component.extend({
       this.sendAction('signOut');
     },
     navbarCollapse () {
-      const navMain = this.$('.navbar-collapse')
-      navMain.collapse('hide')
+      const navMain = this.$('.navbar-collapse');
+      navMain.collapse('hide');
     }
   },
 });
