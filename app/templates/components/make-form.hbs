@@ -1,8 +1,8 @@
 <form id="make-form" autocomplete="nope" class="col-md-offset-4 col-md-4 form-horizontal" {{action "submit" on='submit'}}>
 <legend>Select a Car Make and Year</legend>
   <div class="">
-    {{make-select selectedOption=makeform.nhtsa_make_id model=model}}
-    {{car-year-input year=makeform.year}}
+    {{make-select selectedOption=model.makeform.nhtsa_make_id model=model.make}}
+    {{car-year-input year=model.makeform.year}}
     <div class="container row">
       <div class="col-sm-3">
         {{#link-to "index"}}

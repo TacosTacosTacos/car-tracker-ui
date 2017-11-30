@@ -9,23 +9,23 @@ export default Ember.Component.extend({
   },
   actions: {
     submit () {
-      if(!this.get('makeform.nhtsa_make_id')) {
+      if(!this.get('model.makeform.nhtsa_make_id')) {
         // error handling for the make dropdown
         this.get('flashMessages')
         .warning('You must enter a Car Make');
         this.$('#carMake').focus();
       } else {
         // Store the entered data
-        const myModel =  this.get('model');
+        const myModel = this.get('model.make');
 
         const filteredMake = myModel.content.filter((internalModel) => {
-         return internalModel._data.nhtsa_make_id == this.get('makeform.nhtsa_make_id');
+         return internalModel._data.nhtsa_make_id == this.get('model.makeform.nhtsa_make_id');
        })[0].id;
 
         // Store Make Information
         this.get('signupstorage').set('make_id', filteredMake);
-        this.get('signupstorage').set('nhtsa_make_id', this.get('makeform.nhtsa_make_id'));
-        this.get('signupstorage').set('year', this.get('makeform.year'));
+        this.get('signupstorage').set('nhtsa_make_id', this.get('model.makeform.nhtsa_make_id'));
+        this.get('signupstorage').set('year', this.get('model.makeform.year'));
 
         // Check for Cars
         this.get('nhtsa').getModelInformation()
