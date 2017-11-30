@@ -18,8 +18,8 @@ export default Ember.Component.extend({
         const myModel = this.get('model.make');
 
         const filteredMakeId = myModel.content.filter((internalModel) => {
-         return internalModel._data.nhtsa_make_id == this.get('model.makeform.nhtsa_make_id');
-       })[0].id;
+         return internalModel._data.nhtsa_make_id === Number(this.get('model.makeform.nhtsa_make_id'));
+        })[0].id;
 
         // Store Make Information
         this.get('signupstorage').set('make_id', filteredMakeId);

@@ -8,7 +8,7 @@ export default Ember.Route.extend({
   credentials: storageFor('auth'),
   signupstorage: storageFor('sign-up'),
   model () {
-    return {}
+    return {};
   },
   actions: {
     signUp (credentials) {

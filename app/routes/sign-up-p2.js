@@ -5,7 +5,7 @@ export default Ember.Route.extend({
   auth: Ember.inject.service(),
   signupstorage: storageFor('sign-up'),
   model () {
-    return {}
+    return {};
   },
   actions: {
     submit () {

@@ -11,7 +11,7 @@ export default Ember.Route.extend({
     }
   },
   model () {
-    return {}
+    return {};
   },
   actions: {
     changePassword (passwords) {
