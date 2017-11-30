@@ -9,6 +9,10 @@ export default Ember.Component.extend({
   actions: {
     signOut () {
       this.sendAction('signOut');
+    },
+    navbarCollapse () {
+      const navMain = this.$('.navbar-collapse')
+      navMain.collapse('hide')
     }
   },
 });
