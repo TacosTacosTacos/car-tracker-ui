@@ -5,6 +5,8 @@ export default Ember.Component.extend({
   signupstorage: storageFor('sign-up'),
   nhtsa: Ember.inject.service(),
   makeform: {},
+  didRender () {
+  },
   actions: {
     submit () {
       if(!this.get('makeform.nhtsa_make_id')) {

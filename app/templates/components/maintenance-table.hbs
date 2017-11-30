@@ -18,7 +18,7 @@
         <td>{{service.service_type.name}}</td>
         <td>{{number-format service.current_mileage}}</td>
         <td>{{service.notes}}</td>
-        <td><button type="button" class="btn btn-warning" {{action 'editServiceRecord' service.id}}>Edit</button>
+        <td><button type="button" class="btn btn-warning " {{action 'editServiceRecord' service.id}}>Edit</button>
           &nbsp;<button type="button" class="btn btn-danger" {{action 'deleteServiceRecord' service}}>Delete</button></td>
       </tr>
       {{/each}}
