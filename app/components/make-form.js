@@ -4,7 +4,6 @@ import { storageFor } from 'ember-local-storage';
 export default Ember.Component.extend({
   signupstorage: storageFor('sign-up'),
   nhtsa: Ember.inject.service(),
-  makeform: {},
   didRender () {
   },
   actions: {
@@ -18,12 +17,12 @@ export default Ember.Component.extend({
         // Store the entered data
         const myModel = this.get('model.make');
 
-        const filteredMake = myModel.content.filter((internalModel) => {
+        const filteredMakeId = myModel.content.filter((internalModel) => {
          return internalModel._data.nhtsa_make_id == this.get('model.makeform.nhtsa_make_id');
        })[0].id;
 
         // Store Make Information
-        this.get('signupstorage').set('make_id', filteredMake);
+        this.get('signupstorage').set('make_id', filteredMakeId);
         this.get('signupstorage').set('nhtsa_make_id', this.get('model.makeform.nhtsa_make_id'));
         this.get('signupstorage').set('year', this.get('model.makeform.year'));
 
@@ -47,8 +46,4 @@ export default Ember.Component.extend({
       }
     },
   },
-  willDestroyElement () {
-    this.set('makeform', {});
-  },
-
 });

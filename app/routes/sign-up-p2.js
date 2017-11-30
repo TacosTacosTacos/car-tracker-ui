@@ -4,9 +4,9 @@ import { storageFor } from 'ember-local-storage';
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
   signupstorage: storageFor('sign-up'),
-  // model () {
-  //   return this.get('store').findAll('model');
-  // },
+  model () {
+    return {}
+  },
   actions: {
     submit () {
       // Transition to the next signup screen
@@ -19,12 +19,5 @@ export default Ember.Route.extend({
     } else if (!this.get('signupstorage.nhtsa_make_id')) {
       this.transitionTo('sign-up-p1');
     }
-
-
-
-
-
   },
-  afterModel () {
-  }
 });

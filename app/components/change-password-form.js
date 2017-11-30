@@ -1,19 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-
-  passwords: {},
-
   actions: {
     submit () {
-      this.sendAction('submit', this.get('passwords'));
-    },
-
-    reset () {
-      this.set('passwords', {});
+      this.sendAction('submit', this.get('model'));
     },
   },
-  willDestroyElement () {
-    this.set('passwords', {});
-  }
 });

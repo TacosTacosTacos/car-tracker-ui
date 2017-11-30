@@ -10,6 +10,9 @@ export default Ember.Route.extend({
       .danger('You must be authenticated to access this page.');
     }
   },
+  model () {
+    return {}
+  },
   actions: {
     changePassword (passwords) {
       this.get('auth').changePassword(passwords)

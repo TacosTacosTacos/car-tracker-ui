@@ -1,9 +1,9 @@
 <form id="sign-up" class="col-md-offset-4 col-md-4 form-horizontal" {{action "submit" on='submit'}}>
   <legend>Setup Your Account</legend>
     <div class="">
-    {{email-input email=credentials.email}}
-    {{password-input password=credentials.password}}
-    {{password-confirmation-input password=credentials.passwordConfirmation}}
+    {{email-input email=model.email}}
+    {{password-input password=model.password}}
+    {{password-confirmation-input password=model.passwordConfirmation}}
     <div class="container row">
       <div class="col-sm-3">
         {{#link-to "sign-up-p2"}}

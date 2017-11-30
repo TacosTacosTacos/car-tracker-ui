@@ -7,7 +7,9 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
   credentials: storageFor('auth'),
   signupstorage: storageFor('sign-up'),
-
+  model () {
+    return {}
+  },
   actions: {
     signUp (credentials) {
       this.get('auth').signUp(credentials)
