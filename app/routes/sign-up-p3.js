@@ -20,7 +20,9 @@ export default Ember.Route.extend({
       .then(() => this.transitionTo('user-dashboard'))
       .then(() => {
         this.get('flashMessages')
-        .success('Congratulations on becoming a new user!');
+        .success('Congratulations on becoming a new user!', {
+          timeout: 5500
+          });
       })
       .catch(() => {
         this.get('flashMessages')

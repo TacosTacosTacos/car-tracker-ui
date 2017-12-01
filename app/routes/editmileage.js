@@ -13,6 +13,10 @@ export default Ember.Route.extend({
 actions: {
   submit (mileageInfo) {
     mileageInfo.save()
+    .then(() => {
+      this.get('flashMessages')
+      .success('Your changes has been made.');
+    })
     .then(() => this.transitionTo('mileage'));
   },
 },
